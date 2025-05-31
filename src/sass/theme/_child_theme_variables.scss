@@ -3,5 +3,36 @@
 // Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
 
 
-$purple: #5533ff; // Thats a sample how you could change a BootStrap variable.
-$primary: $purple;  // Once we've changed the value, we'll also make it the primary brand color.
+// Color system
+$green: #45b83c; // BCGC green
+$pink: rgba(235,127,173,0.2); // BCGC pink
+$blue: hsl(188, 47%, 90%); // BCGC blue
+$teal: hsl(187, 51%, 50%); // BCGC teal #3FB0C1
+
+// scss-docs-start gray-color-variables
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+// scss-docs-end gray-color-variables
+
+
+$primary: $green; 
+$secondary: $pink; // BCGC pink
+
+$font-family-sans-serif: 'Figtree', Roboto, sans-serif; // Figtree font from Google Fonts
+
+$headings-color: $primary;
+
+$nav-link-color: $gray-900;
+$nav-link-hover-color: $teal;
+$bs-dropdown-link-active-bg: $gray-400;
+$dropdown-link-active-color: $gray-200;
+

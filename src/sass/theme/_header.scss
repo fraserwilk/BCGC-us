@@ -1,0 +1,38 @@
+@media screen and (max-width: 575px) {
+    a.navbar-brand {
+    width: 70%;
+    }
+}
+
+ul#main-menu {
+    > li.current-menu-ancestor > a,
+    > li.current-menu-parent > a {
+        color: $nav-link-hover-color;
+        font-weight: bold;
+    }
+    li {
+        font-weight: 700;
+        text-transform: uppercase;
+
+        a {
+            color: $nav-link-color;
+            &:hover {
+                color: $nav-link-hover-color;
+            }
+        }
+
+        &.current-menu-item {
+            a {
+                color: $nav-link-hover-color;
+                font-weight: bold;
+            }
+        }
+    }
+    
+    .dropdown-item.active, .dropdown-item:active {
+        color: var(--bs-dropdown-link-active-color);
+        text-decoration: none;
+        background-color: $gray-100;
+    }
+}
+

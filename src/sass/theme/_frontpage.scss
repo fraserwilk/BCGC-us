@@ -1,0 +1,32 @@
+.hero-caption {
+    font-size: clamp(0.8rem, 1rem + 0.2vw, 1.5rem);
+    font-weight: 600;
+    color: $primary;
+}
+
+.notice {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: $box-shadow;
+
+    &.pink {
+        margin: $spacer * 2;
+        background-color: $pink;
+        border: 1px solid darken($pink, 10%);
+    }
+
+    &.box {
+        background-color: #f8f8f8;
+        border: 1px solid darken(#f8f8f8, 10%);
+    }
+
+    &.gray {
+        background-color: $gray-200;
+        border: 1px solid darken($gray-200, 10%);
+    }
+
+    &.blue {
+        background-color: $blue;
+        border: 1px solid darken($blue, 10%);
+    }
+}

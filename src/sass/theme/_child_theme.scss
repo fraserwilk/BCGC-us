@@ -1,0 +1,73 @@
+body {
+    font-family: $font-family-sans-serif;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#full-width-page-wrapper {
+    padding: 0 1rem;
+}
+
+h1 {
+    padding-top: 4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.wp-block-group {
+    margin: 4rem 0;
+}
+
+.btn-bcgc {
+    background-color: $gray-800;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: lighten($gray-800, 20%);
+        color: $white;
+    }
+}
+
+// Used in archive.php
+header.page-header {
+    padding-top: 4rem;
+}
+
+#wrapper-footer {
+    &.wrapper {
+        padding: 0;
+    }
+
+    .site-footer {
+        border-top: solid 4px $teal;
+        padding: 2rem 0;
+        font-size: 0.9rem;;
+    }
+
+    .text-left {
+        text-align: left;
+    }
+
+    .text-right {
+        text-align: right;
+    }
+}
+
+.galleries {
+    display: flex;
+    flex-wrap: wrap;
+}
