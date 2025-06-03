@@ -11,6 +11,7 @@ npm run watch-bs
 
 - Development environment setup
 VS Code
+Understrap
 
 - Custom post types overview
 
@@ -24,3 +25,4 @@ WPPusher
 - Cache invalidation strategy
 
 - Testing instruction
+Added GLightbox assets for gallery lightbox

@@ -129,3 +129,13 @@ function fix_svg() {
 add_action( 'admin_head', 'fix_svg' );
 // End allow SVG
 
+// Enqueue GLightbox assets for gallery lightbox
+function enqueue_glightbox_assets() {
+    // GLightbox CSS & JS from CDN
+    wp_enqueue_style('glightbox-css', 'https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css');
+    wp_enqueue_script('glightbox-js', 'https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js', array(), null, true);
+
+    // Init script
+    wp_add_inline_script('glightbox-js', 'const lightbox = GLightbox({ selector: ".glightbox" });');
+}
+add_action('wp_enqueue_scripts', 'enqueue_glightbox_assets');

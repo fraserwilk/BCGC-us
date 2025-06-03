@@ -14733,4 +14733,13 @@ ul#main-menu .dropdown-item.active, ul#main-menu .dropdown-item:active {
   color: hsl(187deg, 51%, 50%);
 }
 
+@media (min-width: 0px) {
+  #programs h5.card-title a, #programs .card-title.h5 a {
+    text-decoration: none;
+  }
+  #programs .card-text {
+    font-size: smaller;
+  }
+}
+
 /*# sourceMappingURL=child-theme.css.map */
