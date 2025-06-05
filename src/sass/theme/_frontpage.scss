@@ -30,3 +30,26 @@
         border: 1px solid darken($blue, 10%);
     }
 }
+
+.booking-link-group {
+  display: flex;
+  justify-content: flex-start;
+  margin: 2rem 0;
+
+    .booking-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: $teal; /* or your brand color */
+    color: #fff;
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    }
+
+    .booking-link:hover {
+    background-color: #004080;
+    }
+}
