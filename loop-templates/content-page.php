@@ -12,7 +12,10 @@ defined( 'ABSPATH' ) || exit;
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<?php
-	if ( ! is_page_template( 'page-templates/no-title.php' ) ) {
+	if (
+		! is_page_template( 'page-templates/no-title.php' ) &&
+		! is_page_template( 'page-templates/frontpage.php' )
+	) {
 		the_title(
 			'<header class="entry-header"><h1 class="entry-title">',
 			'</h1></header><!-- .entry-header -->'
