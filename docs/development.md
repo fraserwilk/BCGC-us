@@ -26,3 +26,5 @@ WPPusher
 
 - Testing instruction
 Added GLightbox assets for gallery lightbox
+use .fade-in for Fade In effect
+use .trigger1 & .reveal1 for ScrollMagic effect - in on scroll & out again

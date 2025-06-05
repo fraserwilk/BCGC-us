@@ -139,3 +139,12 @@ function enqueue_glightbox_assets() {
     wp_add_inline_script('glightbox-js', 'const lightbox = GLightbox({ selector: ".glightbox" });');
 }
 add_action('wp_enqueue_scripts', 'enqueue_glightbox_assets');
+
+
+// load ScrollMagic from a CDN
+function enqueue_scrollmagic_scripts() {
+    // ScrollMagic core
+    wp_enqueue_script('scrollmagic', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js', [], null, true);
+    wp_enqueue_script('scrollmagic-indicators', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js', ['scrollmagic'], null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_scrollmagic_scripts');

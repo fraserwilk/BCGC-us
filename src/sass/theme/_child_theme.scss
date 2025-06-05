@@ -71,3 +71,30 @@ header.page-header {
     display: flex;
     flex-wrap: wrap;
 }
+
+// using ScrollMagic CDN for animations
+// https://cdnjs.com/libraries/ScrollMagic
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+.reveal1 {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 1s ease-in-out;
+}
+
+.reveal1.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Optional spacer styling */
+.spacer {
+  height: 100vh;
+}
