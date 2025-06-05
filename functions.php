@@ -93,6 +93,10 @@ function understrap_child_customize_controls_js() {
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
 
+// includes the WooCommerce support:
+add_action( 'after_setup_theme', function() {
+    add_theme_support( 'woocommerce' );
+});
 
 // Allow SVG
 add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {
