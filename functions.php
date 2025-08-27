@@ -152,3 +152,64 @@ function enqueue_scrollmagic_scripts() {
     wp_enqueue_script('scrollmagic-indicators', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js', ['scrollmagic'], null, true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_scrollmagic_scripts');
+
+// Custom function to display post date in content-single.php
+if ( ! function_exists( 'understrap_posted_on' ) ) {
+	/**
+	 * Prints HTML with meta information for the current post-date/time and author.
+	 * The date is displayed without a link.
+	 */
+	function understrap_posted_on() {
+		$post = get_post();
+		if ( ! $post ) {
+			return;
+		}
+
+		$time_string = sprintf(
+			'<time class="entry-date published" datetime="%1$s">%2$s</time>',
+			esc_attr( get_the_date( 'c' ) ),
+			esc_html( get_the_date( 'F Y' ) ) // Only Month and Year
+		);
+
+		$posted_on = apply_filters(
+			'understrap_posted_on',
+			sprintf(
+				'<span class="posted-on">%1$s %2$s</span>',
+				esc_html_x( 'Posted in', 'post date', 'understrap' ),
+				apply_filters( 'understrap_posted_on_time', $time_string )
+			)
+		);
+
+		$author_id = (int) get_the_author_meta( 'ID' );
+		if ( 0 === $author_id ) {
+			$byline = '';
+		} else {
+			$byline = apply_filters(
+				'understrap_posted_by',
+				sprintf(
+					'<span class="byline"> %1$s<span class="author vcard">%2$s</span></span>',
+					$posted_on ? esc_html_x( 'by ', 'post author', 'understrap' ) : esc_html_x( 'Posted by', 'post author', 'understrap' ),
+					esc_html( get_the_author_meta( 'display_name', $author_id ) )
+				)
+			);
+		}
+
+		echo $posted_on . $byline; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	}
+}
+
+// Custom function to display categories in content-single.php
+if ( ! function_exists( 'understrap_categories_list' ) ) {
+	/**
+	 * Displays a list of categories.
+	 *
+	 * @since 1.2.0
+	 */
+	function understrap_categories_list() {
+		$categories_list = get_the_category_list( understrap_get_list_item_separator() );
+		if ( $categories_list && understrap_categorized_blog() ) {
+			/* translators: %s: Categories of current post */
+			printf( '<span class="cat-links">' . esc_html__( 'Posted in %s', 'understrap' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		}
+	}
+}
