@@ -42,6 +42,11 @@ h2 {
     }
 }
 
+.wp-element-button {
+	border-radius: 4px;
+	background-color: $teal;
+}
+
 // Used in archive.php
 header.page-header {
     padding-top: 4rem;
