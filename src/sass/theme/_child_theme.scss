@@ -42,9 +42,12 @@ h2 {
     }
 }
 
-.wp-element-button {
-	border-radius: 4px;
-	background-color: $teal;
+a[href$='.pdf']:after {
+   content: url(https://brightgolf.org.au/wp-content/uploads/2022/12/pdf-icon-e1670543170868.png);
+   margin-left: 1rem;
+   display: inline-block;
+   width: 12px;
+   height: 12px;
 }
 
 // Used in archive.php
