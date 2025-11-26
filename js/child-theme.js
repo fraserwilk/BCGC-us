@@ -6756,10 +6756,10 @@
 	  new ScrollMagic.Scene({
 	    triggerElement: ".trigger1",
 	    triggerHook: 0.9,
-	    duration: "80%",
-	    offset: 50
+	    duration: 0,
+	    offset: 50,
+		reverse: false // Trigger only once
 	  }).setClassToggle(".reveal1", "visible")
-	  // .addIndicators() // for debugging — remove in production
 	  .addTo(controller);
 	});
 
