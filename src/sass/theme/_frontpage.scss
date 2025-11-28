@@ -31,7 +31,7 @@
     }
 }
 
-.booking-link-group {
+/* .booking-link-group {
   display: flex;
   justify-content: flex-start;
   margin: 2rem 0;
@@ -40,7 +40,7 @@
     display: block;
     width: 100%;
     text-align: center;
-    background-color: $teal; /* or your brand color */
+    background-color: $teal;
     color: #fff;
     padding: 1rem;
     text-decoration: none;
@@ -52,4 +52,9 @@
     .booking-link:hover {
     background-color: #004080;
     }
+} */
+
+
+.wp-block-group.notice.blue .wp-block-post {
+	padding-bottom: 2rem;
 }
