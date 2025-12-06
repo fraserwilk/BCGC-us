@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    
+</body>
+
+<style>
+.comp-grid-wrapper {
+    width: 100%;
+    overflow-x: auto;      /* enables horizontal scroll on small screens */
+}
+
+/* DESKTOP / DEFAULT */
+.comp-grid {
+    display: grid;
+    grid-template-columns: minmax(200px, 220px) repeat(12, minmax(70px, 1fr));
+    border: 2px solid #000;
+    font-size: 1rem;
+}
+
+/* Month heading cells */
+.comp-grid .month {
+    font-weight: 700;
+    padding: 8px;
+    text-align: center;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
+    background: #fff;
+}
+
+/* Label column */
+.comp-grid .label {
+    font-weight: 700;
+    padding: 10px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    background: #fff;
+    text-align: left;
+}
+
+/* Base cell styling */
+.comp-cell {
+    padding: 10px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* colour bands */
+.vets      { background:#f9c233; }
+.chook     { background:#4c8fdc; color:#fff; }
+.ladies    { background:#ffd1d1; }
+.ladies-strong { background:#ff9ca1; }
+.mens      { background:#8fd26a; }
+.friday    { background:#c2c9ff; }
+.saturday  { background:#9fdcff; }
+
+/* MEDIUM SCREENS */
+@media (max-width: 900px) {
+    .comp-grid {
+        font-size: 12px;
+        grid-template-columns: minmax(130px, 150px) repeat(12, minmax(60px, 1fr));
+    }
+    .comp-grid .label,
+    .comp-grid .month,
+    .comp-cell {
+        padding: 6px 4px;
+    }
+}
+
+/* SMALL SCREENS */
+@media (max-width: 600px) {
+    .comp-grid {
+        font-size: 11px;
+        grid-template-columns: minmax(120px, 140px) repeat(12, minmax(50px, 1fr));
+    }
+}
+</style>
+
+<div class="comp-grid-wrapper">
+<div class="comp-grid">
+
+    <!-- Empty cell above labels -->
+    <div class="label" style="font-size: larger;">Competitions</div>
+
+    <!-- Month headings -->
+    <div class="month">Jan</div>
+    <div class="month">Feb</div>
+    <div class="month">Mar</div>
+    <div class="month">Apr</div>
+    <div class="month">May</div>
+    <div class="month">Jun</div>
+    <div class="month">Jul</div>
+    <div class="month">Aug</div>
+    <div class="month">Sep</div>
+    <div class="month">Oct</div>
+    <div class="month">Nov</div>
+    <div class="month">Dec</div>
+
+    <!-- Monday Veterans -->
+    <div class="label">Monday Veterans</div>
+    <div class="comp-cell vets" style="grid-column: 2 / 4;">8:30am for 9am</div>
+    <div class="comp-cell vets" style="grid-column: 4 / 13;">10:30am for 11am</div>
+    <div class="comp-cell vets" style="grid-column: 13 / 14;">8:30am for 9am</div>
+
+    <!-- Wednesday Chook Run -->
+    <div class="label">Wednesday Chook Run</div>
+    <div class="comp-cell chook" style="grid-column: 2 / 5;">4pm-6pm</div>
+    <div class="comp-cell" style="grid-column: 5 / 13;">No Competition</div>
+    <div class="comp-cell chook" style="grid-column: 13 / 14;">4pm-6pm</div>
+
+    <!-- Wednesday Ladies -->
+    <div class="label">Wednesday Ladies</div>
+    <div class="comp-cell ladies-strong" style="grid-column: 2 / 4;">
+        8:30am for 9am<br>Starts 17 Dec
+    </div>
+    <div class="comp-cell ladies" style="grid-column: 4 / 7;">
+        9:30am for 10am
+    </div>
+    <div class="comp-cell ladies-strong" style="grid-column: 7 / 10;">
+        10am for 10:30am
+    </div>
+    <div class="comp-cell ladies" style="grid-column: 10 / 12;">
+        9:30am for 10am
+    </div>
+    <div class="comp-cell ladies-strong" style="grid-column: 12 / 14;">
+        8:30am for 9am<br>Starts 17 Dec
+    </div>
+
+    <!-- Thursday Mens -->
+    <div class="label">Thursday Mens</div>
+    <div class="comp-cell mens" style="grid-column: 2 / 14;">
+        Tee times 9:30am - 11:00am
+    </div>
+
+    <!-- Friday All Gender 9 Hole -->
+    <div class="label">Friday All Gender 9 Hole</div>
+    <div class="comp-cell friday" style="grid-column: 2 / 14;">
+        Tee times 9:30am - 10am
+    </div>
+
+    <!-- Saturday All Gender -->
+    <div class="label">Saturday All Gender</div>
+    <div class="comp-cell saturday" style="grid-column: 2 / 14;">
+        Tee times 9:30am - 11:30am
+    </div>
+
+</div>
+</div>
+
+</html>

@@ -34,7 +34,7 @@ get_header(); ?>
                     'category_name'  => 'monthly-program', 
                     'posts_per_page' => 9,
                     'paged'          => $paged,
-                    'order'       => 'DESC',
+                    'order'       => 'ASC',
                 ));
                 ?>
 
